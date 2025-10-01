@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio Maria Clara Cavalcante Gaspar</title>
+</head>
+
+<body>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#paginainicial" class="pi-link">Página Inicial</a>
+            </li>
+            <li>
+                <a href="#sobremim" class="sm-link">Sobre Mim</a>
+            </li>
+            <li>
+                <a href="#formacaoacademica" class="fa-link">Formação Acadêmica</a>
+            </li>
+            <li>
+                <a href="#certificacoeseconquistas" class="certcon-link">Certificações e Conquistas</a>
+            </li>
+            <li>
+                <a href="#projetos" class="proj-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="cont-link">Contatos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="paginainicial" class="paginainicial">
+        <img src="imagens-oficial/PI.png" alt="Imagem de Página Inicial" class="imagem-pi">
+    </section>
+
+    <section id="sobremim" class="sobremim">
+        <div class="sobre-conteudo">
+            <h2 class="sobre-titulo">Hi, I'm Maria Clara</h2>
+            <p class="sobre-texto">
+                Sou estudante de Ciência da Computação, com bastante interesse na área de programação e segurança da informação. Tenho facilidade em aprender novas tecnologias e busco sempre aplicar o que estudo em projetos práticos que reforçam meu conhecimento.
+            </p>
+            <p class="sobre-texto">
+                Meu foco é crescer na área de tecnologia, construindo soluções funcionais e criativas. Valorizo organização, clareza e boas práticas, tanto no código quanto na forma de apresentar meus trabalhos. Estou em constante evolução, explorando ferramentas e técnicas que me preparem para desafios maiores na carreira.
+            </p>
+        </div>
+    </section>
+
+    <section id="formacaoacademica" class="formacaoacademica">
+        <div class="fa-conteudo">
+            <h2 class="fa-titulo">Formação Acadêmica</h2>
+                <ul class="fa-lista">
+                    <li class="fa-item">• Ensino Médio Completo - Colégio Aslan (2024)</li>
+                    <li class="fa-item">• Certificação de Inglês Avançado - Idiomas Aslan (2024)</li>
+                    <li class="fa-item">• Cursando Bacharelado em Ciência da Computação - FaciWyden (2024 - Atual)</li>
+                </ul>
+        </div>
+    </section>
+
+    <section id="certificacoeseconquistas" class="certificacoeseconquistas">
+        <div class="certcon-conteudo">
+            <h2 class="certcon-titulo">Certificações e Conquistas</h2>
+            <ul class="certcon-lista">
+                <li class="certcon-item">• Certificação em Inglês Avançado - Idiomas Aslan (2024)</li>
+                <li class="certcon-item">• Certificação em Introdução à Programação em Python (curso remoto) - USP (Universidade de São Paulo - 2024).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <div class="proj-conteudo">
+            <h2 class="proj-titulo">Projetos</h2>
+                    <ul class="proj-lista">
+                        <li class="proj-item">• Projeto de Desenvolvimento Web: Criação de um site pessoal utilizando HTML, CSS e JavaScript.</li>
+                        <p class="proj-item">Este projeto consistiu no desenvolvimento de um site pessoal em formato de portfólio, utilizando exclusivamente HTML e CSS. A proposta fazia parte de uma atividade avaliativa e teve como objetivo aplicar os conhecimentos adquiridos em sala, unindo prática de codificação com criatividade no design.</p>
+                    </ul>
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <div class="cont-conteudo">
+            <h2 class="cont-titulo">Entre em Contato</h2>
+            <form class="cont-form" id="formulario" onsubmit="enviarWhatsApp(event)">
+                <div class="grupo-form">
+                    <input placeholder="Nome" class="campo-form" id="nome">
+                </div>
+                <div class="grupo-form">
+                    <textarea class="campo-form"placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
+                </div>
+                <button type="submit" class="botao-form">Enviar mensagem para WhatsApp</button>
+            </form>
+        </div>
+    </section>   
+    
+    <script>
+        function enviarWhatsApp(event) {
+            event.preventDefault();
+            
+            const nome = document.getElementById('nome');
+            const mensagem = document.getElementById('mensagem');
+            const telefone = '5591982038921';
+            const texto = `Olá, meu nome é ${nome.value}, ${mensagem.value}`;
+            const mdgFormatada = encodeURIComponent(texto);
+            const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${mdgFormatada}`;
+            window.open(url, '_blank');
+        }
+    </script>
+
+    <footer>
+        <div class="rodape-container">
+            <div class="redes-sociais">
+                <a href="https://www.instagram.com/_.m.clara.cg._/#" target="_blank" class="icone-link">
+                    <img src="imagens-oficial/Insta.png" alt="Ícone Instagram" class="icone-imagem">
+                </a>
+                <a href="https://github.com/claracavalcante497-alt" class="icone-link">
+                    <img src="imagens-oficial/GitHub.png" alt="Ícone Email" class="icone-imagem">
+                </a>
+                <a href="https://www.linkedin.com/in/maria-clara-cavalcante-gaspar-1a243b210?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="icone-link">
+                    <img src="imagens-oficial/Linkdin.png" alt="Ícone LinkedIn" class="icone-imagem">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
